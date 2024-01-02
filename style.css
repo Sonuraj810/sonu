@@ -18,6 +18,7 @@ body{
     text-shadow: 5px 1px 3px rgba(0,0,0,0.5);
     font:bold 30px  'Ephesis', cursive;
     padding:5px 10px;
+    margin-left: 10px;
     border-left: solid 2px #F80F60;
 }
 .cont{
@@ -83,6 +84,73 @@ body{
     color:#002147;
     border:solid 2px #002147;
 }
+.rmenu{
+    position:fixed;
+    left:0;
+    top:225px;
+    width:50px;
+    height:225px;
+    z-index:1000;
+}
+.rmenu ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.rmenu ul li a:link,.rmenu ul li a:visited{
+    display:block;
+    padding:10px 15px;
+    font-size:25px;
+    transition:all 1s;
+    text-shadow: 5px 6px 6px rgba(0,0,0,1);
+}
+.rmenu ul li a:hover{
+    transform:translate(10px,0);
+}				
+.rdetails{
+    position:absolute;
+    left:50px;
+    top:8px;
+    display:block;
+    padding:8px 15px;
+    margin-left:10px;
+    background:rgba(2,0,0,0.6);
+    color:yellow;
+    font:normal 14px 'Ephesis', cursive;
+    transition:all 1s;
+    display:none;
+    border-radius:5px;
+}
+.rmenu ul li a:hover .rdetails{
+    display:block;
+    animation-name:aar;
+    animation-duration:1s;
+}    
+.trangle{
+    width:0px;
+    height:0px;
+    float:left;
+    border-top:solid 12px transparent;
+    border-bottom:solid 12px transparent;
+    border-right:solid 12px rgba(2,0,0,0.6);
+    position:absolute;
+    left:49px;
+    top:13px;
+    display:none;
+}        
+@keyframes aar{
+    0%{
+        transform:translateX(-10px);
+    }
+    100%{
+        transform:translateX(10px);
+    }
+}
+.rmenu ul li a:hover .trangle{
+    display:block;
+    animation-name:aar;
+    animation-duration:1s;
+}
 .menuarea1{
     background: #000000;
     padding:0;
@@ -123,37 +191,44 @@ body{
     width:100%;
     height:600px;
 }
+.slidearea{
+    text-align: center;
+    background: #45F729;
+}
 .slide1{
     background:red;
-    padding:5px 30px;
-}
-.slide1 h2{
+    padding:10px 0;
+    width:100%;
     color:white;
     font:normal 27px 'Ephesis', cursive;
 }	
 .slide2{
-background:black;
-padding:5px 0;
+background:rgb(0, 0, 0);
+padding:10px 0;
 }
 .slide2 marquee ul{
     list-style:none;
+    margin:0;
+    padding:0;
 }
 .slide2 marquee ul li{
     float:left;
     font:bold 13px arial;
-    margin-right:20px;
+    padding:10px 10px;
 }
 .slide2 marquee ul li a:link,.slide2 marquee ul li a:visited{
     color:white;
-    text-decoration:none;	
+    text-decoration:none;
+    padding:5px 10px;
+    border:dotted 1px #000000;
 }
 .slide2 marquee ul li a:hover{
     color:yellow;
-    border:dotted 1px #45F729;
+    border:dotted 1px #ffffff;
 }
 .programarea{
     text-align: center;
-    padding:20px 0;
+    padding:30px 0;
 }
 .program1{
     text-align:center;
@@ -196,14 +271,14 @@ padding:5px 0;
     background:#002147 !important;
 }
 .facilityarea{
-    padding:30px 0;
+    padding:40px 0;
     text-align:center;
     background: #F8F7F5;
 }
 .farea21{
     width:100%;
     float:left;
-    margin:20px 0;
+    margin:30px 0;
     background:white;
     box-shadow: 0px 5px 4px 1px rgba(198,198,198,1);
 }
@@ -265,7 +340,7 @@ padding:5px 0;
 }
 .extraarea{
     text-align: center;
-    padding:40px 0;
+    padding:40px 40px;
     background: white;
 }
 .extra1{
@@ -285,7 +360,7 @@ padding:5px 0;
     bottom:-145px;
     width:100%;
     height:100%;
-    background:rgba(10, 12, 54, 0.585);
+    background:rgba(0,33, 71, 0.6);
     display:block;
     transition:all 0.5s;
     padding-right: 45px;
@@ -430,7 +505,7 @@ padding:5px 0;
 }
 
 .teddyarea{
-    padding:60px 50px;
+    padding:60px 30px;
     background: white;
     text-align: center;
 }
@@ -509,17 +584,17 @@ padding:5px 0;
 }
 .tdetail h1{
     font:normal 35px arial;
-    padding:5% 5%;
+    padding:20px 30px;
 }
 .tdetail p{
     font:normal 15px arial;
-    padding:5% 10%;
+    padding:10px 10px;
 }
 .teddyside{
     width:0px;
     height:0px;
     position: relative;
-    top:75px;
+    top:5px;
     left:255px;
     border-top:solid 55px transparent;
     border-right:solid 55px #002147;
@@ -711,4 +786,7 @@ padding:5px 0;
     color:#F8F7F5;
     text-align: center;
     padding:20px 0;
+}
+.bottom a:link,.bottom a:visited{
+    text-decoration: none;
 }
